@@ -50,9 +50,9 @@ Tech.init(
   },
   {
     hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      beforeCreate: async (newTechData) => {
+        newTechData.password = await bcrypt.hash(newTechData.password, 10);
+        return newTechData;
       },
     },
     sequelize,
