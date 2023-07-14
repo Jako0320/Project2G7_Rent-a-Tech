@@ -1,4 +1,5 @@
 const Sequelize = require('sequelize');
+const cloudinary = require('cloudinary').v2;
 require('dotenv').config();
 
 let sequelize;
@@ -18,4 +19,11 @@ if (process.env.JAWSDB_URL) {
   );
 }
 
-module.exports = sequelize;
+cloudinary.config({
+  cloud_name: process.env.CL_CLOUD,
+  api_key: process.env.CL_API,
+  api_secret: process.env.CL_SECRET
+});
+
+
+module.exports = { sequelize, cloudinary };
