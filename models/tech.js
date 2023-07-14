@@ -8,7 +8,7 @@ class Tech extends Model {
   }
 }
 
-tech.init(
+Tech.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -59,7 +59,7 @@ tech.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'tech',
   }
 );
 
