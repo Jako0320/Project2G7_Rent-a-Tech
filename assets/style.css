@@ -1,6 +1,15 @@
-div.search {
+
+.carTech {
+display: flex;
+justify-content: center;
+opacity: 0.5;
+z-index: -5;
+  
+}
+
+.search {
   display: flex;
   justify-content: center;
-  padding: 200px;
-
+  padding: 0px;
+  
 }
