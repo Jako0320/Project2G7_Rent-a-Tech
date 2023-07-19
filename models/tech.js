@@ -28,6 +28,12 @@ Tech.init(
         isEmail: true,
       },
     },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [10],
+      },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,16 +42,19 @@ Tech.init(
       },
     },
     address: {
-        type: Datatypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
     zip: {
-        type: Datatypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [5],
+      },
     },
     city: {
-        type: Datatypes.STRING,
-        allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
