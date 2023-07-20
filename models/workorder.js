@@ -17,6 +17,18 @@ Workorder.init(
     },
     description: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    service_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    service_zip: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [5],
+      },
     },
     date_created: {
       type: DataTypes.DATE,

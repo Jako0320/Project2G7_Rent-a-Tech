@@ -28,6 +28,12 @@ User.init(
         isEmail: true,
       },
     },
+    phone: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [10],
+      },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -36,10 +42,12 @@ User.init(
       },
     },
     zip: {
-        type: Datatypes.INTEGER,
-        allowNull: false,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [5],
+      },
     },
-  },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
