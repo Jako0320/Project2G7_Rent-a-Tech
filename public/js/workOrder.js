@@ -28,9 +28,3 @@ const workorderFormHandler = async (event) => {
   document
     .querySelector('.workOrder-form')
     .addEventListener('submit', workorderFormHandler);
-  
-// unsure if necessary
-//   document
-//     .querySelector('.project-list')
-//     .addEventListener('click', delButtonHandler);
-  
