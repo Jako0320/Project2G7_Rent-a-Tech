@@ -1,3 +1,16 @@
+.navbar {
+  font-family: "copperplate", fantasy;
+}
+
+.navbar-custom {
+  background-color: lightsteelblue;
+}
+
+.navbar-brand {
+  color: #0f57bd;
+  font-size: 40px !important;
+}
+
 
 .carTech {
 display: flex;

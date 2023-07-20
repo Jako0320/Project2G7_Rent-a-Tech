@@ -36,7 +36,7 @@ User.init(
       },
     },
     zip: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
     },
   },
