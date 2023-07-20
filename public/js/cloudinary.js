@@ -12,7 +12,18 @@ async function uploadPicture(imagePath) {
     console.error('Error uploading image:', error);
   }
 }
+const cloudinary = require('../..config/connection');
 
-//Use
-const imagePath = '/path';
-uploadPicture(imagePath);
+//upload a picture
+async function uploadPicture(imagePath) {
+  try {
+    //Upload
+    const result = await cloudinary.uploader.upload(imagePath);
+
+    //Retrieve
+    const imageUrl = result.secure_url;
+    console.log('Image URL:', imageUrl);
+  } catch (error) {
+    console.error('Error uploading image:', error);
+  }
+}
