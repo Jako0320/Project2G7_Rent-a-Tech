@@ -15,26 +15,27 @@ Workorder.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    issue: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    service_address: {
+    make: {
+      type: DataTypes.STRING,
+    },
+    model: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    service_zip: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        len: [5],
-      },
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
-    },    
+    },  
+    service: {
+      type: DataTypes.ENUM,
+      values: ['Flat tire', 'Car will not start', 'Out of gas', 'Other'],
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
