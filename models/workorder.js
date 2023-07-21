@@ -16,11 +16,14 @@ Workorder.init(
       allowNull: false,
     },
     issue: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM,
+      values: ['Tire pressure low/flat', 'Shaky steering wheel/vibrations', 'Observe smoke', 'Check engine light', 'Headlights', 'Dead battery', 'Car alarm', 'A/C issues', 'Heater issues', 'Lockout', 'Unsure', 'Other', 'No issue'],
       allowNull: false,
     },
     make: {
-      type: DataTypes.STRING,
+      type: DataTypes.ENUM,
+      values: ['Honda/Acura', 'Toyota/Lexus', 'Kia', 'Nissan', 'Ford', 'Chevrolet', 'Hyundai', 'Jeep', 'Subaru', 'Mazda', 'Mercedes-Benz', 'Volkswagen/BMW', 'Other'],
+      allowNull: false
     },
     model: {
       type: DataTypes.STRING,
@@ -33,7 +36,7 @@ Workorder.init(
     },  
     service: {
       type: DataTypes.ENUM,
-      values: ['Flat tire', 'Car will not start', 'Out of gas', 'Other'],
+      values: ['Oil change', 'General Diagnosis', 'Wheel alignment', 'Replace air filters', 'Replace wiper blades', 'Antifreeze', 'Brake fluid', 'State Inspection', 'Towing', 'Unsure', 'Other'],
       allowNull: false,
     },
     user_id: {
