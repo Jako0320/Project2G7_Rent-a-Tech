@@ -1,24 +1,26 @@
+* {
+  font-family: 'PT Sans', sans-serif;  
+}
+
+
 #intro {
   background-image: url("../assets/images/tech.jpg");
   background-repeat: no-repeat;
- 
-	
 
-	
  
-}
-
-.navbar {
-  font-family: "copperplate", fantasy;
 }
 
 .navbar-custom {
-  background-color: lightsteelblue;
+  background-color: #090e47;
 }
 
 .navbar-brand {
-  color: #0f57bd;
+  color: white;
   font-size: 40px !important;
+}
+
+.nav-link {
+  color:white;
 }
 
 
