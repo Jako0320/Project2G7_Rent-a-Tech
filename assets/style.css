@@ -1,3 +1,13 @@
+#intro {
+  background-image: url("../assets/images/tech.jpg");
+  background-repeat: no-repeat;
+ 
+	
+
+	
+ 
+}
+
 .navbar {
   font-family: "copperplate", fantasy;
 }
@@ -13,7 +23,6 @@
 
 
 
-
 .btn-group {
   display: flex;
   justify-content: center;
@@ -21,6 +30,7 @@
   margin-right: 140px;
   margin-top: 280px;
   margin-bottom: 280px;
+  
 }
 
 
