@@ -2,18 +2,6 @@ const router = require("express").Router();
 const { User, Tech, Workorder } = require('../models');
 const cloudinary = require('../config/cloudinaryconnection');
 
-// router.get("/",(req,res)=>{
-//   res.render("landing")
-// })
-
-// router.get("/userlogin",(req,res)=>{
-//   res.render("userlogin")
-// })
-
-// router.get("/techlogin",(req,res)=>{
-//   res.render("techlogin")
-// })
-
 router.get('/workorder/:id', async (req, res) => {
   try {
     const workOrderData = await Workorder.findByPk(req.params.id, {
@@ -40,12 +28,15 @@ router.get('/workorder/:id', async (req, res) => {
   }
 });
 
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
+
+router.get('/profile', async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Project }],
+    });
+
+
 
 //     const user = userData.get({ plain: true });
 
@@ -101,6 +92,26 @@ router.post('/search', async (req, res) => {
     console.error(err);
     res.render('error', { message: 'An error occurred while searching for the work order.' });
   }
+});
+
+router.get('/homepage', (req, res) => {
+  res.render('homepage');
+});
+
+router.get('/userprofile', (req, res) => {
+  res.render('userprofile', { logged_in: req.session.logged_in });
+});
+
+router.get('/techprofile', (req, res) => {
+  res.render('techprofile', { logged_in: req.session.logged_in });
+});
+
+router.get('/search', (req, res) => {
+  res.render('search');
+});
+
+router.get('/searchResult', (req, res) => {
+  res.render('searchResult');
 });
 
 module.exports = router;
