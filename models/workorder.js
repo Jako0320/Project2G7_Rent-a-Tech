@@ -39,6 +39,10 @@ Workorder.init(
       values: ['Oil change', 'General Diagnosis', 'Wheel alignment', 'Replace air filters', 'Replace wiper blades', 'Antifreeze', 'Brake fluid', 'State Inspection', 'Towing', 'Unsure', 'Other'],
       allowNull: false,
     },
+    image_url: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

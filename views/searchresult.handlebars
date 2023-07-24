@@ -1,0 +1,12 @@
+{{#if message}}
+  <p>{{message}}</p>
+{{else}}
+  <h2>Search Result</h2>
+    <p>Work Order ID: {{workOrder.id}}</p>
+    <p>Name: {{workOrder.name}}</p>
+    <p>Issue: {{workOrder.issue}}</p>
+    <p>Car make: {{workOrder.make}}</p>
+    <p>Car model: {{workOrder.model}}</p>
+    <p>Date created: {{workOrder.date_created}}</p>
+    <p>Service: {{workOrder.service}}</p>
+{{/if}}
