@@ -4,7 +4,7 @@
 
 
 #intro {
-  background-image: url("../images/tech.jpg");
+  background-image: url("/images/tech.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
