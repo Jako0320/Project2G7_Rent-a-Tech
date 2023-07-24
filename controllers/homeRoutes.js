@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User, Tech, Workorder } = require('../models');
 const cloudinary = require('../config/cloudinaryconnection');
 
+
 router.get('/workorder/:id', async (req, res) => {
   try {
     const workOrderData = await Workorder.findByPk(req.params.id, {
@@ -35,15 +36,16 @@ router.get('/profile', async (req, res) => {
       include: [{ model: Project }],
     });
 
-    const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+const user = userData.get({ plain: true });
+
+res.render('profile', {
+...user,
+logged_in: true
+});
+} catch (err) {
+res.status(500).json(err);
+}
 });
 
 router.get('/userlogin', (req, res) => {
