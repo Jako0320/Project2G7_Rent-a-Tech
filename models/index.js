@@ -1,6 +1,6 @@
 const User = require("./user");
 const Tech = require("./tech");
-const Workorder = require("./Workorder");
+const Workorder = require("./workorder");
 
 Workorder.belongsTo(User, {
   foreignKey: "user_id",
