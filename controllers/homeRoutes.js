@@ -2,6 +2,10 @@ const router = require("express").Router();
 const { User, Tech, Workorder } = require('../models');
 const cloudinary = require('../config/cloudinaryconnection');
 
+router.get('/', (req, res) => {
+  res.render('homepage');
+});
+
 router.get('/workorder/:id', async (req, res) => {
   try {
     const workOrderData = await Workorder.findByPk(req.params.id, {
@@ -94,9 +98,6 @@ router.post('/search', async (req, res) => {
   }
 });
 
-router.get('/homepage', (req, res) => {
-  res.render('homepage');
-});
 
 router.get('/userprofile', (req, res) => {
   res.render('userprofile', { logged_in: req.session.logged_in });
@@ -112,6 +113,10 @@ router.get('/search', (req, res) => {
 
 router.get('/searchResult', (req, res) => {
   res.render('searchResult');
+});
+
+router.get('/workorder', (req, res) => {
+  res.render('workorder');
 });
 
 module.exports = router;
