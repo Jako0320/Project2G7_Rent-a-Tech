@@ -28,6 +28,7 @@ router.get('/workorder/:id', async (req, res) => {
   }
 });
 
+
 router.get('/profile', async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -35,16 +36,18 @@ router.get('/profile', async (req, res) => {
       include: [{ model: Project }],
     });
 
-    const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
+//     const user = userData.get({ plain: true });
+
+//     res.render('profile', {
+//       ...user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/userlogin', (req, res) => {
   if (req.session.logged_in) {
