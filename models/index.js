@@ -1,5 +1,5 @@
 const User = require("./user");
-const Tech = require("./Tech");
+const Tech = require("./tech");
 const Workorder = require("./Workorder");
 
 Workorder.belongsTo(User, {
