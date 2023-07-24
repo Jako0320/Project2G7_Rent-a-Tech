@@ -322,14 +322,83 @@ CREATE TABLE users (
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL
 );
-Insert into users values(3,'Maddie Hill', 'muzamil@gmail.com', '1234rob')
+Insert into users values(3,'Matt Evert', 'navy@gmail.com', 'Battle90')
 CREATE TABLE technicians (
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL UNIQUE,
   password VARCHAR(255) NOT NULL
 );
-Insert into technicians values(3,'Allen Ramcharam', 'allen_ra@gmail.com', '564opt')
+Insert into technicians values(3,'Edward Degarmo', 'Degarmo_mo@gmail.com', 'Havelot65')
+CREATE TABLE workorders (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  technicians_id INT NOT NULL,
+ booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (technicians_id) REFERENCES technicians(id)
+  );
+  CREATE DATABASE RENT_A_TECH
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into users values(3,'Enio Lopez', 'Lopez_E@gmail.com', 'Titan67')
+CREATE TABLE technicians (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into technicians values(3,'Cj Glanding', 'Brody_g@gmail.com', '564opt')
+CREATE TABLE workorders (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  technicians_id INT NOT NULL,
+ booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (technicians_id) REFERENCES technicians(id)
+  );
+  CREATE DATABASE RENT_A_TECH
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into users values(3,'Stephanie Cabrera', 'Star_bucks@gmail.com', 'Frappe333')
+CREATE TABLE technicians (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into technicians values(3,'Steve Brodback', 'Tundra_23@gmail.com', 'YOTa1!')
+CREATE TABLE workorders (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  technicians_id INT NOT NULL,
+ booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (technicians_id) REFERENCES technicians(id)
+  );
+  CREATE DATABASE RENT_A_TECH
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into users values(3,'Nano Rodriguez', 'Santurce_pr@gmail.com', 'Cerra99')
+CREATE TABLE technicians (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL
+);
+Insert into technicians values(3,'Jori Suarez', 'Finland_pr@gmail.com', 'Calle1!')
 CREATE TABLE workorders (
   id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT NOT NULL,
