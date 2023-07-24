@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm navbar-custom py-2">
+  <a class="navbar-brand" href="#">
+    <img
+      src="../../public/images/car.png"
+      width="40"
+      height="40"
+      class="d-inline-block align-center"
+      alt=""
+    />
+    Rent-a-Tech
+  </a>
+  <form class="form-inline ml-auto" action="/search" method="GET">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search by Workorder ID" name="workorder_id" aria-label="Search">
+    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  {{#if logged_in}}
+    <a href="/profile">profile</a>
+    |
+    <button class="no-button" id="logout">logout</button>
+  {{else}}
+    <a href="/userlogin">User login</a>
+  {{/if}}
+</nav>

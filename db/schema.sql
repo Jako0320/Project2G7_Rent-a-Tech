@@ -19,5 +19,5 @@ CREATE TABLE workorders (
   service_id INT NOT NULL,
   booking_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (user_id) REFERENCES users(id),
-  FOREIGN KEY (technicians_id) REFERENCES technicians(id)
+  FOREIGN KEY (tech_id) REFERENCES technicians(id)
   );
