@@ -98,13 +98,8 @@ router.post('/search', async (req, res) => {
   }
 });
 
-
-router.get('/userprofile', (req, res) => {
-  res.render('userprofile', { logged_in: req.session.logged_in });
-});
-
-router.get('/techprofile', (req, res) => {
-  res.render('techprofile', { logged_in: req.session.logged_in });
+router.get('/profile', (req, res) => {
+  res.render('profile', { logged_in: req.session.logged_in });
 });
 
 router.get('/search', (req, res) => {
