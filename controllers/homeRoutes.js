@@ -98,12 +98,12 @@ router.post('/searchresult', async (req, res) => {
   }
 });
 
-router.get('/profile', (req, res) => {
-  res.render('profile', { logged_in: req.session.logged_in });
+router.get('/searchresult', (req, res) => {
+  res.render('searchresult');
 });
 
-router.get('/searchResult', (req, res) => {
-  res.render('searchResult');
+router.get('/profile', (req, res) => {
+  res.render('profile', { logged_in: req.session.logged_in });
 });
 
 router.get('/workorder', (req, res) => {

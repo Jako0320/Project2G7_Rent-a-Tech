@@ -8,6 +8,6 @@ const searchRoutes = require('./searchRoutes');
 router.use('/users', userRoutes);
 router.use('/techs', techRoutes);
 router.use('/workorders', workorderRoutes);
-router.get('/search', searchRoutes.searchWorkorder)
+router.get('/searchresult', searchRoutes.searchWorkorder)
 
 module.exports = router;
