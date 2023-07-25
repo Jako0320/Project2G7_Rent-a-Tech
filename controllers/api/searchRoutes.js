@@ -1,7 +1,5 @@
 const { Workorder } = require('../../models');
 
-
-
 const searchID = {
   searchWorkorder: async (req, res) => {
     try {
@@ -12,13 +10,13 @@ const searchID = {
       });
 
       if (!workorder) {
-        return res.render('searchResult', { message: 'Workorder not found' });
+        return res.render('searchresult', { message: 'Workorder not found' });
       }
 
-      return res.render('searchResult', { workorder });
+      return res.render('searchresult', { workorder });
     } catch (err) {
       console.error('Error searching workorder:', err);
-      return res.render('searchResult', { message: 'An error occurred during the search' });
+      return res.render('searchresult', { message: 'An error occurred during the search' });
     }
   },
 };
