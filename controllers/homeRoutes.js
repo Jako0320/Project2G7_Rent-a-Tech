@@ -83,14 +83,14 @@ router.post('/upload', async (req, res) => {
   }
 });
 
-router.post('/search', async (req, res) => {
+router.post('/searchresult', async (req, res) => {
   const { workOrderId } = req.body;
   try {
     const workOrder = await WorkOrder.findByPk(workOrderId);
     if (workOrder) {
-      res.render('searchResult', { workOrder });
+      res.render('searchresult', { workOrder });
     } else {
-      res.render('searchResult', { notFound: true });
+      res.render('searchresult', { notFound: true });
     }
   } catch (err) {
     console.error(err);
@@ -98,16 +98,12 @@ router.post('/search', async (req, res) => {
   }
 });
 
+router.get('/searchresult', (req, res) => {
+  res.render('searchresult');
+});
+
 router.get('/profile', (req, res) => {
   res.render('profile', { logged_in: req.session.logged_in });
-});
-
-router.get('/search', (req, res) => {
-  res.render('search');
-});
-
-router.get('/searchResult', (req, res) => {
-  res.render('searchResult');
 });
 
 router.get('/workorder', (req, res) => {

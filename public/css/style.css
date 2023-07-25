@@ -2,9 +2,13 @@
   font-family: 'PT Sans', sans-serif;  
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}  
 
 #intro {
-  background-image: url("../images/tech.jpg");
+  background-image: url("/images/tech.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
